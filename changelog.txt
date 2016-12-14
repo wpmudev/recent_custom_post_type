@@ -1,0 +1,40 @@
+Plugin Name: Recent Custom Posts Type Widget
+Author: Incsub
+
+Change Log:
+----------------------------------------------------------------------
+
+
+2.1.2 - 2013-03-13
+----------------------------------------------------------------------
+- Custom loop clearing.
+- Removing references.
+
+2.1.1 - 2012-12-21
+----------------------------------------------------------------------
+- PHP<5.3 compatibility layer (thanks, Arnold).
+
+2.1 - 2012-10-26
+----------------------------------------------------------------------
+- Fixed permalink order issue.
+- Added post author limit option.
+- Added featured image flag.
+
+2.0 - 2012-09-11
+----------------------------------------------------------------------
+- Improved admin and list output.
+- Added support for more common output fields.
+- Added custom fields support.
+
+1.2 - 2011-05-16
+----------------------------------------------------------------------
+- Added widget option for toggling post dates on/off.
+- Added order by/order direction widget options.
+
+1.0.1 - 2011-05-14
+----------------------------------------------------------------------
+- Added the optional CSS class argument to widget settings.
+
+1
+----------------------------------------------------------------------
+- Initial release

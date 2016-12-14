@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+#main div.rcpt_items ul.rcpt_items_list,
+ul.rcpt_items_list li dl.rcpt_item_custom_fields {
+	margin:0; padding: 0;
+	list-style-type: none;
+}
+ul.rcpt_items_list li {
+	margin-bottom: .4em;
+}
+ul.rcpt_items_list li span {
+	display: block;
+}
+ul.rcpt_items_list li span.rcpt_item_date {
+	color: #666;
+	font-size: .8em;
+}
+ul.rcpt_items_list li span.rcpt_item_date span.rcpt_item_posted {
+	display: none;
+}
+ul.rcpt_items_list li a img {
+	border: none;
+}
