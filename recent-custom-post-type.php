@@ -253,24 +253,23 @@ EORcptJs;
 
 	function update( $new_instance, $old_instance ) {
 		$instance                   = $old_instance;
-		$instance['title']          = strip_tags( $new_instance['title'] );
-		$instance['post_type']      = strip_tags( $new_instance['post_type'] );
-		$instance['featured_image'] = strip_tags( $new_instance['featured_image'] );
-		$instance['post_author']    = strip_tags( $new_instance['post_author'] );
-		$instance['limit']          = strip_tags( $new_instance['limit'] );
-		$instance['class']          = strip_tags( $new_instance['class'] );
-		$instance['order_by']       = strip_tags( $new_instance['order_by'] );
-		$instance['order_dir']      = strip_tags( $new_instance['order_dir'] );
+		$instance['title']          = !empty( $new_instance['title'] ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['post_type']      = !empty( $new_instance['post_type'] ) ? strip_tags( $new_instance['post_type'] ) : '';
+		$instance['featured_image'] = !empty( $new_instance['featured_image'] ) ? strip_tags( $new_instance['featured_image'] ) : '';
+		$instance['post_author']    = !empty( $new_instance['post_author'] ) ? strip_tags( $new_instance['post_author'] ) : '';
+		$instance['limit']          = !empty( $new_instance['limit'] ) ? strip_tags( $new_instance['limit'] ) : '';
+		$instance['class']          = !empty( $new_instance['class'] ) ? strip_tags( $new_instance['class'] ) : '';
+		$instance['order_by']       = !empty( $new_instance['order_by'] ) ? strip_tags( $new_instance['order_by'] ) : '';
+		$instance['order_dir']      = !empty( $new_instance['order_dir'] ) ? strip_tags( $new_instance['order_dir'] ) : '';
 
-		$instance['show_title']      = strip_tags( $new_instance['show_title'] );
-		$instance['titles_as_links'] = strip_tags( $new_instance['titles_as_links'] );
-		$instance['show_body']       = strip_tags( $new_instance['show_body'] );
-		$instance['show_thumbs']     = strip_tags( $new_instance['show_thumbs'] );
-		$instance['show_dates']      = strip_tags( $new_instance['show_dates'] );
+		$instance['show_title']      = !empty( $new_instance['show_title'] ) ? strip_tags( $new_instance['show_title'] ) : '';
+		$instance['titles_as_links'] = !empty( $new_instance['titles_as_links'] ) ? strip_tags( $new_instance['titles_as_links'] ) : '';
+		$instance['show_body']       = !empty( $new_instance['show_body'] ) ? strip_tags( $new_instance['show_body'] ) : '';
+		$instance['show_thumbs']     = !empty( $new_instance['show_thumbs'] ) ? strip_tags( $new_instance['show_thumbs'] ) : '';
+		$instance['show_dates']      = !empty( $new_instance['show_dates'] ) ? strip_tags( $new_instance['show_dates'] ) : '';
 
 		$instance['fields'] = array();
-		$fields             = $new_instance['fields'];
-		$fields             = $fields ? $fields : array();
+		$fields             = !empty( $new_instance['fields'] ) ? $new_instance['fields'] : array();
 		foreach ( $fields as $key => $value ) {
 			$key                        = wp_strip_all_tags( $key );
 			$instance['fields'][ $key ] = wp_strip_all_tags( $value );
