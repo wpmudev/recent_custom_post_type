@@ -305,13 +305,13 @@ EORcptJs;
 		$fields = $fields ? $fields : array();
 
 		$query_args = array(
-			'showposts'        => $limit,
-			'nopaging'         => 0,
-			'post_status'      => 'publish',
-			'post_type'        => $post_type,
-			'orderby'          => $order_by,
-			'order'            => $order_dir,
-			'caller_get_posts' => 1
+			'showposts'           => $limit,
+			'nopaging'            => 0,
+			'post_status'         => 'publish',
+			'post_type'           => $post_type,
+			'orderby'             => $order_by,
+			'order'               => $order_dir,
+			'ignore_sticky_posts' => 1
 		);
 		if ( $post_author ) {
 			$query_args['author'] = $post_author;
